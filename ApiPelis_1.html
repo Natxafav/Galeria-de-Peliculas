@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Sitio de peliculas</title>
+  <link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+  <script>
+    // Llama a la función onYouTubeIframeAPIReady cuando se carga la API de YouTube
+    function onYouTubeIframeAPIReady() {
+      YTPlayer = new YT.Player("yt-player", {
+        height: "360",
+        width: "640",
+        videoId: "", // El ID del video se establecerá dinámicamente
+        playerVars: {
+          autoplay: 1, // Reproducción automática
+          controls: 1, // Mostrar controles del reproductor
+          rel: 0, // No mostrar videos relacionados al final
+          showinfo: 0 // No mostrar información del video
+        }
+      });
+    }
+  </script>
+  <body>
+    <h1>Películas </h1>
+    <div class="navbar"></div>
+    <div class="contenedor" id="contenedor"></div>
+
+    <div class="paginacion">
+      <button id="btnAnterior">Anterior</button>
+      <button id="btnSiguiente">Siguiente</button>
+    </div>
+    
+    <script type="module" src="env.js"></script>
+    <script type="module" src="app.js"></script>
+    
+  </body>
+</html>

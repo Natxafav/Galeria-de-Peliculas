@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #e0e0e0;
+  color: #1d1d1d;
+}
+
+.contenedor {
+position: relative;
+  width: 90%;
+  max-width: 4000px;
+  margin: 40px auto 100px auto;
+  top: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.divTrailerDescripcion {
+  position: absolute; 
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 2; 
+  top: -10px; 
+  left: 0; 
+  width: 80%;
+  max-width: 400px; 
+  height: auto;
+  overflow: scroll;
+  display: none; 
+}
+
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 40px;
+  width: 100vw;
+  color: #ff6600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e0e0e0;
+  z-index: 6;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  width: 98vw;
+  height: 80px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  position: fixed;
+  left: 0px;
+  top: 40px;
+  z-index: 6;
+}
+
+.divNavIndiv {
+  margin: 2px;
+  min-width: max-content;
+  min-height: max-content;
+  background-color: black;
+  color: #ff6600;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  z-index: inherit;
+}
+
+.contenedor .pelicula {
+  position: relative; /* Establece una relación de posición para los elementos hijos absolutos */
+  text-align: center;
+  transition: transform 0.3s; /* Agrega una transición para un efecto suave */
+}
+.contenedor .pelicula .titulo {
+  font-size: 16px;
+  font-weight: 600;
+}
+.contenedor .pelicula .poster {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+.contenedor .pelicula:hover .divTrailerDescripcion {
+  display: block; /* Muestra el elemento al pasar el ratón */
+}
+.paginacion {
+  position: fixed;
+  bottom: 0;
+  background: #100a1f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.paginacion button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background: #241744;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+}
+
+.paginacion button:hover {
+  background: #137c32;
+}
